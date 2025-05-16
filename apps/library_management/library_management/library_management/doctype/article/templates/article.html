@@ -1,0 +1,29 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="article-detail-container">
+    <div class="article-header">
+        <img src="{{ image }}" alt="{{ title }}" class="article-image" />
+        <h1 class="article-title">{{ title }}</h1>
+        <p class="article-author">By {{ author }}</p>
+
+        <div class="article-status">
+            {% if status == 'Available' %}
+                <span class="badge badge-success">Available</span>
+            {% elif status == 'Issued' %}
+                <span class="badge badge-danger">Issued</span>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="article-meta">
+        <p><strong>Publisher:</strong> {{ publisher }}</p>
+        <p><strong>ISBN:</strong> {{ isbn }}</p>
+    </div>
+
+    <div class="article-description">
+        <p>{{ description }}</p>
+    </div>
+</div>
+{% endblock %}
+

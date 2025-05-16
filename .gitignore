@@ -1,0 +1,29 @@
+# Ignore mysql backup directory
+mysql_backup/
+
+# Ignore cache directories
+.cache/
+
+# Ignore trae server internal directory
+.trae-server/
+
+# Ignore Frappe apps (which are separate git repositories)
+apps/frappe/
+apps/erpnext/
+apps/erpnext_chinese/
+
+# Ignore virtual environment
+env/
+
+# Ignore node_modules
+node_modules/
+**/node_modules/
+
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore logs
+logs/
+*.log
